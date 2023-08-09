@@ -37,7 +37,7 @@ public class AppOrderPositiveTest {
 
 
     @Test
-   public void shouldTestV2() {
+   public void AppOrderPositiveTest1() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Василий");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79270000000");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
