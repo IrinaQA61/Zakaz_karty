@@ -15,9 +15,7 @@ public class AppOrderPositiveTest {
 
     private WebDriver driver;
 
-    public static void setupAll() {
-        WebDriverManager.chromedriver().setup();
-    }
+
     @BeforeEach
     public void beforeEach() {
         ChromeOptions options = new ChromeOptions();
