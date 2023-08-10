@@ -15,6 +15,10 @@ public class AppOrderPositiveTest {
 
     private WebDriver driver;
 
+    @BeforeAll
+    public static void setupAll() {
+        WebDriverManager.chromedriver().setup();
+    }
 
     @BeforeEach
     public void beforeEach() {
@@ -40,7 +44,7 @@ public class AppOrderPositiveTest {
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
         var actualTest = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
-        assertEquals("Ваша заявка успешно отправлена!", actualTest);
+        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualTest);
     }
 }
 
